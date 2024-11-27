@@ -1,4 +1,44 @@
+
 <div class="section" id="menu">
+    <script>
+        function submitOrder(event) {
+        event.preventDefault();
+    
+        const customerName = document.getElementById('customer-name').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const address = document.getElementById('address').value.trim();
+    
+        if (!customerName || !phone || !address) {
+            alert('Vui lòng nhập đầy đủ thông tin!');
+            return;
+        }
+    
+        fetch('http://localhost:3000/order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                customerName,
+                phone,
+                address,
+                cart, // Sử dụng giỏ hàng hiện tại
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                alert('Đặt hàng thất bại: ' + data.error);
+            } else {
+                alert(data.message);
+                cart = []; // Làm trống giỏ hàng sau khi đặt
+                updateCartDisplay(); // Cập nhật giao diện giỏ hàng
+            }
+        })
+        .catch(err => console.error('Lỗi:', err));
+    }
+    
+    </script>
     <h1>Thực Đơn</h1>
     <p>Bạn có thể đặt bánh tại đây</p>
 
@@ -134,11 +174,13 @@
         Đặt hàng thành công!
     </div>
 </div>
-
 <script>
+    const cart = [];
+
     function order(item, type) {
         if (item) {
-            // Logic để thêm sản phẩm vào giỏ hàng
+            // Thêm sản phẩm vào giỏ hàng
+            cart.push({ name: item, type, quantity: 1 });
             const cartItems = document.getElementById('order-cart-items');
             const newItem = document.createElement('div');
             newItem.textContent = `${type}: ${item}`;
@@ -152,10 +194,36 @@
         document.getElementById('order-form').scrollIntoView();
     }
 
-    function submitOrder(event) {
+    async function submitOrder(event) {
         event.preventDefault();
-        // Logic để xử lý đặt hàng (cần hoàn thiện thêm)
-        document.getElementById('success-message').style.display = 'block';
-        document.getElementById('error-message').style.display = 'none';
+        const customerName = document.getElementById('customerName').value;
+        const phone = document.getElementById('phone').value;
+        const address = document.getElementById('address').value;
+
+        if (!customerName || !phone || !address || cart.length === 0) {
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('success-message').style.display = 'none';
+            return;
+        }
+
+        try {
+            const response = await fetch('http://localhost:3004/order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ customerName, phone, address, cart }),
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('error-message').style.display = 'none';
+            } else {
+                throw new Error(data.error || 'Có lỗi xảy ra!');
+            }
+        } catch (error) {
+            console.error('Lỗi khi gửi đơn hàng:', error);
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('success-message').style.display = 'none';
+        }
     }
 </script>
