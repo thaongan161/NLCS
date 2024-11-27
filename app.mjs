@@ -15,7 +15,7 @@ app.set('views', path.join(path.resolve(), 'views'));
 // Các tuyến đường
 const routes = [
     { path: '/home', title: 'Trang Chủ - Bánh Dân Gian', view: 'home' },
-    { path: '/gioithieu', title: 'Giới thiệu - Bánh Dân Gian', view: 'gioithieu' },
+    { path: '/gioithieu', title: 'Giới thiệu - Bánh Dân Gian', view: 'gioithieu' }, 
     { path: '/menu', title: 'Thực đơn - Bánh Dân Gian', view: 'menu' },
     { path: '/news', title: 'Tin tức - Bánh Dân Gian', view: 'news' },
     { path: '/contact', title: 'Liên hệ - Bánh Dân Gian', view: 'contact' }
