@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"> <!-- Sửa đường dẫn -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/home"><strong>Trang chủ</strong></a>
+        <a href="/gioithieu"><strong>Giới thiệu</strong></a>
+        <a href="/menu"><strong>Thực đơn</strong></a>
+        <a href="/news"><strong>Tin tức</strong></a>
+        <a href="/contact"><strong>Liên hệ</strong></a>
+    </div>
+
+    <div id="content">
+        <%- include(view) %> <!-- Chèn nội dung từ file view -->
+    </div>
+
+    <footer>
+        <p>© 2024 Bánh Dân Gian. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="js/script.js"></script> <!-- Sửa đường dẫn -->
+</body>
+</html>

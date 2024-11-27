@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới Thiệu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="section" id="gioithieu">
+        <!-- Dòng chữ chạy chào mừng -->
+        <div class="marquee">
+            <p>Chào mừng đến với website bánh dân gian!!</p>
+        </div>
+
+        <h2>Giới thiệu</h2>
+        <p>Nơi hội tụ những hương vị truyền thống và tinh hoa ẩm thực của dân tộc.</p>
+        <p>Bánh dân gian không chỉ đơn thuần là món ăn mà còn là nét văn hóa đặc sắc thể hiện sự khéo léo và sáng tạo của người Việt qua từng công đoạn chế biến, tạo hình. </p>
+        <p>Với mong muốn lan tỏa giá trị văn hóa dân gian, website sẽ cung cấp cho bạn các loại bánh dân gian đặc sắc cùng vài nguyên liệu, cách chế biến cũng như ý nghĩa của từng loại bánh</p>
+        <p>Các bạn sẽ có cơ hội khám phá, học hỏi và trải nghiệm tự tay làm nên những chiếc bánh ngon tại nhà.</p>
+        <p>Hãy cùng nhau giữ gìn và truyền bá giá trị ẩm thực dân gian Việt Nam nhé!</p>
+        <table class="info-container">
+            <tr>
+                <td>
+                    <!-- Bảng Bánh Tét -->
+                    <div class="info-block">
+                        <h3>Bánh tét</h3>
+                        <img src="/images/banh_tet.jpg" alt="Bánh tét" class="baked-image" onclick="toggleDetails('details-banh-tet')"/>
+                        <div id="details-banh-tet" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Gạo nếp, đậu xanh, thịt heo, lá chuối.</p>
+                            <p><strong>Cách chế biến:</strong> Gạo nếp được ngâm qua đêm, sau đó trộn với đậu xanh đã nấu chín và thịt heo. Hỗn hợp này được gói trong lá chuối và luộc trong nhiều giờ.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh tét thường được làm vào dịp Tết Nguyên Đán, tượng trưng cho sự đoàn viên và ấm cúng của gia đình.</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- Bảng Bánh Ú -->
+                    <div class="info-block">
+                        <h3>Bánh ú</h3>
+                        <img src="/images/banh_u.jpg" alt="Bánh ú" class="baked-image" onclick="toggleDetails('details-banh-u')"/>
+                        <div id="details-banh-u" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Gạo nếp, đậu xanh, lá dong.</p>
+                            <p><strong>Cách chế biến:</strong> Gạo nếp được ngâm và trộn với đậu xanh, sau đó gói trong lá dong và hấp chín.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh ú thường được ăn vào dịp lễ hội, thể hiện lòng tri ân đối với tổ tiên.</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- Bảng Bánh Bò -->
+                    <div class="info-block">
+                        <h3>Bánh bò</h3>
+                        <img src="/images/banh_bo.jpg" alt="Bánh bò" class="baked-image" onclick="toggleDetails('details-banh-bo')"/>
+                        <div id="details-banh-bo" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Bột gạo, nước cốt dừa, đường.</p>
+                            <p><strong>Cách chế biến:</strong> Bột gạo được trộn với nước cốt dừa và đường, sau đó hấp trong khuôn cho đến khi chín.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh bò có vị ngọt thanh, thường được dùng làm món tráng miệng trong các bữa tiệc.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Bảng Bánh Da Lợn -->
+                    <div class="info-block">
+                        <h3>Bánh da lợn</h3>
+                        <img src="/images/banh_da_lon.jpg" alt="Bánh da lợn" class="baked-image" onclick="toggleDetails('details-banh-da-lon')"/>
+                        <div id="details-banh-da-lon" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Bột gạo, nước cốt dừa, đường, phẩm màu tự nhiên.</p>
+                            <p><strong>Cách chế biến:</strong> Bột gạo được pha với nước cốt dừa và đường, sau đó chia thành nhiều phần để tạo màu và hấp từng lớp một.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh da lợn mang lại may mắn và thịnh vượng, thường được dùng trong các dịp lễ và tiệc tùng.</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- Bảng Bánh Khoai Mì -->
+                    <div class="info-block">
+                        <h3>Bánh khoai mì</h3>
+                        <img src="/images/banh_khoai_mi.jpg" alt="Bánh khoai mì" class="baked-image" onclick="toggleDetails('details-banh-khoai-mi')"/>
+                        <div id="details-banh-khoai-mi" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Khoai mì, đường, nước cốt dừa, bột gạo.</p>
+                            <p><strong>Cách chế biến:</strong> Khoai mì được nạo nhỏ, trộn với đường và nước cốt dừa, sau đó nướng hoặc hấp cho đến khi chín.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh khoai mì là món ăn dân dã, thường được dùng trong các dịp lễ và tiệc tùng.</p>
+                        </div>
+                    </div>
+                </td>
+            
+            
+                <td>
+                    <!-- Bảng Bánh Chuối Hấp -->
+                    <div class="info-block">
+                        <h3>Bánh chuối hấp</h3>
+                        <img src="/images/banh_chuoi_hap.jpg" alt="Bánh chuối hấp" class="baked-image" onclick="toggleDetails('details-banh-chuoi-hap')"/>
+                        <div id="details-banh-chuoi-hap" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Chuối chín, bột gạo, đường, nước cốt dừa.</p>
+                            <p><strong>Cách chế biến:</strong> Chuối chín được nghiền nhuyễn, trộn với bột gạo và đường, sau đó hấp cho đến khi chín.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh chuối hấp có hương vị ngọt ngào, thường được dùng làm món tráng miệng hoặc ăn nhẹ.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Bảng Bánh Xèo -->
+                    <div class="info-block">
+                        <h3>Bánh xèo</h3>
+                        <img src="/images/banh_xeo.jpg" alt="Bánh xèo" class="baked-image" onclick="toggleDetails('details-banh-xeo')"/>
+                        <div id="details-banh-xeo" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Bột gạo, nước, tôm, thịt, giá đỗ, rau sống.</p>
+                            <p><strong>Cách chế biến:</strong> Bột gạo được pha với nước, đổ vào chảo để chiên, sau đó thêm tôm, thịt và giá đỗ vào.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh xèo là món ăn phổ biến trong bữa cơm gia đình, thể hiện sự ấm cúng và sum vầy.</p>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <!-- Bảng Bánh Bột Lọc -->
+                    <div class="info-block">
+                        <h3>Bánh bột lọc</h3>
+                        <img src="/images/banh_bot_loc.jpg" alt="Bánh bột lọc" class="baked-image" onclick="toggleDetails('details-banh-bot-loc')"/>
+                        <div id="details-banh-bot-loc" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Bột năng, tôm, thịt, gia vị.</p>
+                            <p><strong>Cách chế biến:</strong> Bột năng được nhào với nước, sau đó gói tôm hoặc thịt và hấp cho đến khi chín.</p>
+                            <p><strong>Ý nghĩa:</strong> Bánh bột lọc có vị giòn và dai, thường được dùng trong các dịp lễ hội.</p>
+                        </div>
+                    </div>
+                </td>
+        
+            
+                <td>
+                    <!-- Bảng Bánh Bèo -->
+                    <div class="info-block">
+                        <h3>Bánh bèo</h3>
+                        <img src="/images/banh_beo.jpg" alt="Bánh bèo" class="baked-image" onclick="toggleDetails('details-banh-beo')"/>
+                        <div id="details-banh-beo" class="details" style="display: none;">
+                            <p><strong>Thành phần:</strong> Bột gạo, nước, tôm, thịt, hành phi, mỡ hành, gia vị.</p>
+                            <p><strong>Cách chế biến:</strong></p>
+                            <ol>
+                                <li>Ngâm bột gạo trong nước khoảng 3-4 giờ, sau đó xay nhuyễn với nước.</li>
+                                <li>Chuẩn bị nồi hấp và làm nóng nước. Đổ bột vào khuôn nhỏ hoặc chén và cho vào nồi hấp.</li>
+                                <li>Hấp bánh trong khoảng 10-15 phút cho đến khi bánh chín trong và có độ dẻo.</li>
+                                <li>Khi bánh đã chín, lấy ra và cho tôm hoặc thịt đã xào chín lên trên.</li>
+                                <li>Rắc hành phi và mỡ hành lên bánh, có thể thêm gia vị như nước mắm, ớt để tăng thêm hương vị.</li>
+                            </ol>
+                            <p><strong>Cách thưởng thức:</strong> Bánh bèo thường được ăn nóng, có thể chấm với nước mắm hoặc ăn kèm với rau sống để tăng thêm phần hấp dẫn.</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+</body>
+</html>

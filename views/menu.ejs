@@ -1,0 +1,161 @@
+<div class="section" id="menu">
+    <h1>Thực Đơn</h1>
+    <p>Bạn có thể đặt bánh tại đây</p>
+
+    <table class="menu-table">
+        <tr>
+            <td class="menu-item">
+                <img src="/images/banh_xeo.jpg" alt="Bánh xèo" class="menu-image"/>
+                <h3>Bánh xèo</h3>
+                <p>Bánh xèo chiên giòn với nhân tôm và thịt.</p>
+                <select onchange="order(this.value, 'Bánh xèo')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh xèo nhân tôm">Bánh xèo nhân tôm</option>
+                    <option value="Bánh xèo nhân thịt">Bánh xèo nhân thịt</option>
+                </select>
+            </td>
+
+            <td class="menu-item">
+                <img src="/images/banh_cuon.jpg" alt="Bánh cuốn" class="menu-image"/>
+                <h3>Bánh cuốn</h3>
+                <p>Bánh cuốn nóng và bánh cuốn ngọt.</p>
+                <select onchange="order(this.value, 'Bánh cuốn')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh cuốn nóng">Bánh cuốn nóng</option>
+                    <option value="Bánh cuốn ngọt">Bánh cuốn ngọt</option>
+                </select>
+            </td>
+
+            <td class="menu-item">
+                <img src="/images/banh_tet.jpg" alt="Bánh tét" class="menu-image"/>
+                <h3>Bánh tét</h3>
+                <p>Bánh tét nhân chuối và mỡ.</p>
+                <select onchange="order(this.value, 'Bánh tét')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh tét nhân chuối">Bánh tét nhân chuối</option>
+                    <option value="Bánh tét nhân mỡ">Bánh tét nhân mỡ</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="menu-item">
+                <img src="/images/banh_bot_loc.jpg" alt="Bánh bột lọc" class="menu-image"/>
+                <h3>Bánh bột lọc</h3>
+                <p>Bánh bột lọc nhân tôm và thịt.</p>
+                <select onchange="order(this.value, 'Bánh bột lọc')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh bột lọc nhân tôm">Bánh bột lọc nhân tôm</option>
+                    <option value="Bánh bột lọc nhân thịt">Bánh bột lọc nhân thịt</option>
+                </select>
+            </td>
+
+            <td class="menu-item">
+                <img src="/images/banh_chuoi_hap.jpg" alt="Bánh chuối hấp" class="menu-image"/>
+                <h3>Bánh chuối hấp</h3>
+                <p>Bánh chuối hấp dẻo thơm.</p>
+                <select onchange="order(this.value, 'Bánh chuối hấp')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh chuối hấp truyền thống">Bánh chuối hấp truyền thống</option>
+                    <option value="Bánh chuối hấp nước cốt dừa">Bánh chuối hấp nước cốt dừa</option>
+                </select>
+            </td>
+
+            <td class="menu-item">
+                <img src="/images/banh_khot.jpg" alt="Bánh khọt" class="menu-image"/>
+                <h3>Bánh khọt</h3>
+                <p>Bánh khọt chiên giòn nhân tôm và thịt.</p>
+                <select onchange="order(this.value, 'Bánh khọt')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh khọt nhân tôm">Bánh khọt nhân tôm</option>
+                    <option value="Bánh khọt nhân thịt">Bánh khọt nhân thịt</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="menu-item">
+                <img src="/images/banh_it_la_gai.jpg" alt="Bánh ít lá gai" class="menu-image"/>
+                <h3>Bánh ít lá gai</h3>
+                <p>Bánh ít lá gai truyền thống.</p>
+                <select onchange="order(this.value, 'Bánh ít lá gai')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh ít lá gai truyền thống">Bánh ít lá gai truyền thống</option>
+                </select>
+            </td>
+
+            <td class="menu-item">
+                <img src="/images/banh_la_mit.jpg" alt="Bánh lá mít" class="menu-image"/>
+                <h3>Bánh lá mít</h3>
+                <p>Bánh lá mít thơm ngon.</p>
+                <select onchange="order(this.value, 'Bánh lá mít')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh lá mít truyền thống">Bánh lá mít truyền thống</option>
+                </select>
+            </td>
+
+            <td class="menu-item">
+                <img src="/images/banh_da_lon.jpg" alt="Bánh da lợn" class="menu-image"/>
+                <h3>Bánh da lợn</h3>
+                <p>Bánh da lợn thơm béo.</p>
+                <select onchange="order(this.value, 'Bánh da lợn')">
+                    <option value="">Chọn phân loại</option>
+                    <option value="Bánh da lợn">Bánh da lợn</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Giỏ Hàng</h2>
+    <div id="cart">
+        <h3>Giỏ Hàng</h3>
+        <div id="order-cart-items"></div>
+        <button onclick="scrollToOrderForm()" class="cart-button">
+            <i class="fas fa-shopping-cart"></i> Đặt hàng
+        </button>
+    </div>
+
+    <h2>Thông Tin Đặt Hàng</h2>
+    <form id="order-form" onsubmit="submitOrder(event)" style="display: none;">
+        <label for="customer-name">Tên Khách Hàng:</label>
+        <input type="text" id="customer-name" name="customer-name" required/>
+
+        <label for="phone">Số Điện Thoại:</label>
+        <input type="tel" id="phone" name="phone" required/>
+
+        <label for="address">Địa Chỉ Giao Hàng:</label>
+        <input type="text" id="address" name="address" required/>
+
+        <button type="submit">Đặt Hàng</button>
+    </form>
+
+    <div id="error-message" style="display: none; color: red; font-weight: bold; margin-top: 20px;"></div>
+    <div id="success-message" style="display: none; color: green; font-weight: bold; margin-top: 20px;">
+        Đặt hàng thành công!
+    </div>
+</div>
+
+<script>
+    function order(item, type) {
+        if (item) {
+            // Logic để thêm sản phẩm vào giỏ hàng
+            const cartItems = document.getElementById('order-cart-items');
+            const newItem = document.createElement('div');
+            newItem.textContent = `${type}: ${item}`;
+            cartItems.appendChild(newItem);
+            alert("Bạn đã chọn: " + item);
+        }
+    }
+
+    function scrollToOrderForm() {
+        document.getElementById('order-form').style.display = 'block';
+        document.getElementById('order-form').scrollIntoView();
+    }
+
+    function submitOrder(event) {
+        event.preventDefault();
+        // Logic để xử lý đặt hàng (cần hoàn thiện thêm)
+        document.getElementById('success-message').style.display = 'block';
+        document.getElementById('error-message').style.display = 'none';
+    }
+</script>

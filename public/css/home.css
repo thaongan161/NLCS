@@ -1,0 +1,23 @@
+.image-container {
+    width: 300px;  /* Chiều rộng cố định của container */
+    height: 200px; /* Chiều cao cố định của container */
+    overflow: hidden; /* Ẩn phần thừa của hình ảnh */
+    position: relative; /* Cần thiết cho vị trí của hình ảnh */
+    border: 2px solid #ccc; /* Thêm viền cho container (tùy chọn) */
+    border-radius: 8px; /* Bo góc container (tùy chọn) */
+}
+
+.responsive-image {
+    width: 100%; /* Chiều rộng 100% của container */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    position: absolute; /* Đặt hình ảnh ở vị trí tuyệt đối */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn */
+    object-fit: cover; /* Cắt hình ảnh để phù hợp với kích thước container */
+    transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi cho hình ảnh */
+}
+
+.image-container:hover .responsive-image {
+    transform: translate(-50%, -50%) scale(1.05); /* Phóng to hình ảnh khi hover */
+}
